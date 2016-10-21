@@ -15,6 +15,7 @@ Meteor.methods({
     check(name, String);
     Players.insert({
       name,
+      point: 0,
       createdAt: new Date(),
     });
   },
@@ -22,11 +23,12 @@ Meteor.methods({
     check(playerId, String);
     Players.remove(playerId);
   },
-  // 'players.positive'(playerId) {
-  //   check(playerId, String);
-  //   Players.update(playerId, { $inc: point });
-  // },
-  // 'players.negative'(playerId) {
-  //   Players.update(playerId);
-  // },
+  'players.positive'(playerId) {
+    check(playerId, String);
+    Players.update(playerId, { $inc: { point: 1 } });
+  },
+  'players.negative'(playerId) {
+    check(playerId, String);
+    Players.update(playerId, { $inc: { point: -1 } });
+  },
 });

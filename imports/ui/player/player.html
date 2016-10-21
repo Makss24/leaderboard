@@ -4,10 +4,13 @@
 
   {{ #each players }}
     <div class="player">
+      <div class="delete">
+        <input type="submit" class="js-remove button" value="x">
+      </div>
       <div class="info">
         <h1>{{ name}}</h1>
         <h3>Point :</h3>
-        <h2>{{ count }}</h2>
+        <h2>{{ point }}</h2>
       </div>
       <div class="update">
         <div class="negative button">

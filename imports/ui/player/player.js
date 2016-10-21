@@ -11,15 +11,17 @@ Template.player.onCreated(function playerOnCreated() {
 Template.player.helpers({
   players() {
     return Players.find({});
-  }
+  },
 });
 
 Template.player.events({
-  'click .js-negative'(event, instance) {
-    // instance.point.set(instance.point.get() - 1);
-    Meteor.call('')
-  },
   'click .js-positive'(event, instance) {
-    instance.point.set(instance.point.get() + 1);
+    Meteor.call('players.positive', this._id);
+  },
+  'click .js-negative'(event, instance) {
+    Meteor.call('players.negative', this._id);
+  },
+  'click .js-remove'() {
+    Meteor.call('players.remove', this._id);
   },
 });
