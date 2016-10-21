@@ -1,4 +1,9 @@
 /* FORM TEMPLATE */
+body {
+  font-family: Roboto;
+  text-align: center;
+}
+
 #form {
   text-align: center;
   width: 50%;
@@ -29,6 +34,22 @@
   margin-top: 0;
 }
 
+#players .player .delete {
+  float: right;
+}
+
+#players .player .delete .button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  line-height: 8px;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+}
 #players .player .update .button {
   display: inline-block;
 }
