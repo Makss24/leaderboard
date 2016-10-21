@@ -10,7 +10,7 @@ Template.form.onCreated(function formOnCreated() {
 Template.form.events({
   'click .js-createPlayer'() {
     const name = $('.js-valuePlayer').val();
-    console.log(name);
+    $('.js-valuePlayer').val('');
     return Meteor.call('players.create', name);
   },
 });
