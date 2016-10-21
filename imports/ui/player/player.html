@@ -1,0 +1,25 @@
+<template name="player">
+
+<div id="players">
+
+  {{ #each players }}
+    <div class="player">
+      <div class="info">
+        <h1>{{ name}}</h1>
+        <h3>Point :</h3>
+        <h2>{{ count }}</h2>
+      </div>
+      <div class="update">
+        <div class="negative button">
+          <input class="js-negative" type="submit" value="-">
+        </div>
+        <div class="positive button">
+          <input class="js-positive" type="submit" value="+">
+        </div>
+      </div>
+    </div>
+  {{ /each }}
+
+</div>
+
+</template>
