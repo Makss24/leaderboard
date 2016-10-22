@@ -2,6 +2,10 @@
 body {
   font-family: Roboto;
   text-align: center;
+  background-color: ghostwhite;
+}
+i:hover {
+  cursor: pointer;
 }
 
 /* FORM TEMPLATE */
@@ -12,6 +16,7 @@ body {
   padding: 20px 50px;
   border: 1px solid grey;
   border-radius: 5px;
+  background-color: aliceblue;
 }
 #form h1 {
   margin-top: 0;
@@ -22,60 +27,39 @@ body {
   text-align: center;
 }
 #players .player {
+  position: relative;
   display: inline-block;
   width: 25%;
   margin: 50px 10px;
   padding: 20px;
   border: 1px solid grey;
   border-radius: 5px;
+  background-color: aliceblue;
 }
 #players .player h1 {
   margin-top: 0;
 }
-#players .player .button:focus {
-  border: none;
-  outline: none;
+#players .player .delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: grey;
 }
-#players .player .button {
-  border: none;
-  box-shadow: 0px 0px 5px black;
-  transition: box-shadow .4s;
-}
-#players .player .button:hover {
-  border: none;
-  box-shadow: 0px 0px 10px black,
-              0px 0px 20px black;
-  transition: box-shadow .3s;
-}
-#players .player .delete.button {
-  float: right;
-  background-color: red;
-  color: white;
-  font-weight: bold;
-  line-height: 8px;
-  text-align: center;
-  margin: 0;
-  padding: 5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-}
-#players .player .update .button {
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  line-height: 1px;
-  text-align: center;
+#players .player .update i {
+  text-shadow: 0px 0px 5px black;
+  transition: text-shadow .25s;
+  font-size: 42px;
   margin: 10px;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  font-size: 30px;
 }
-#players .player .update .button.positive {
-  background-color: green;
+#players .player .update i:hover {
+  text-shadow: 0px 0px 10px black,
+              0px 0px 20px black;
+  transition: text-shadow .15s;
 }
-#players .player .update .button.negative {
-  background-color: red;
+#players .player .update .positive {
+  color: green;
+}
+#players .player .update .negative {
+  color: red;
 }

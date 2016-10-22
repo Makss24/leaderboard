@@ -4,18 +4,19 @@
 
   {{ #each players }}
     <div class="player">
-      <input type="submit" class="js-remove button delete" value="x">
+      <i class="fa fa-times js-remove delete" aria-hidden="true"></i>
       <div class="info">
         <h1>{{ name}}</h1>
         <h3>Point :</h3>
         <h2>{{ point }}</h2>
       </div>
       <div class="update">
-        <input class="js-negative button negative" type="submit" value="-">
-        <input class="js-positive button positive" type="submit" value="+">
+        <i class="fa fa-minus-circle js-negative negative" aria-hidden="true"></i>
+        <i class="fa fa-plus-circle js-positive positive" aria-hidden="true"></i>
       </div>
     </div>
   {{ /each }}
+
 
 </div>
 
