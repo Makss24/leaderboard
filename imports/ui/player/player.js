@@ -21,6 +21,11 @@ Template.player.events({
   'click .js-negative'(event, instance) {
     Meteor.call('players.negative', this._id);
   },
+  'click .js-three'(event, instance) {
+    for (let i = 0; i < 3; i++) {
+      Meteor.call('players.positive', this._id);
+    }
+  },
   'click .js-remove'() {
     Meteor.call('players.remove', this._id);
   },

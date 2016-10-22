@@ -63,3 +63,7 @@ i:hover {
 #players .player .update .negative {
   color: red;
 }
+#players .player .update .three {
+  font-size: 32px;
+  color: yellow;
+}
