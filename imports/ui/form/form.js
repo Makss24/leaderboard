@@ -8,11 +8,22 @@ Template.form.onCreated(function formOnCreated() {
 });
 
 Template.form.events({
-  'click .js-createPlayer'() {
+  'click .js-createPlayer'(event) {
+    event.preventDefault();
     const name = $('.js-valuePlayer').val();
     $('.js-valuePlayer').val('');
     return Meteor.call('players.create', name);
   },
+  // 'click .js-resetScore'(event) {
+  //   event.preventDefault();
+  //   return Meteor.call('players.resetScore', (err, res) => {
+  //     if (err) {
+  //       console.log(err);
+  //       return err;
+  //     }
+  //     console.log(res);
+  //     return res;
+  //   });
+  // }
 });
-
 

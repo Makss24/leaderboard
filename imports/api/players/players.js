@@ -31,4 +31,9 @@ Meteor.methods({
     check(playerId, String);
     Players.update(playerId, { $inc: { point: -1 } });
   },
+  // 'players.resetScore'() {
+  //   const players = Players.find({});
+  //   console.log(players);
+  //   return players;
+  // },
 });
