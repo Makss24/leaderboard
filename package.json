@@ -2,7 +2,7 @@
   "name": "leaderboard",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor"
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
